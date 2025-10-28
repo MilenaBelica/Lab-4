@@ -2,11 +2,75 @@
 //
 
 #include <iostream>
+using namespace std;
+void zad1(int a, int b);
+int zad12(int a, int b);
+void zad2(int n);
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int a, b;
+int n;
+int c, d;
+
+int main() {
+
+	//zadanie 1
+	int wieksza;
+	cout << "podaj zmienna a ";
+	cin >> a;
+    cout << "podaj zmienna b ";
+	cin >> b;
+
+	zad1(a, b);
+	wieksza = zad12(a, b);
+	cout << "wieksza wartosc to " << wieksza << endl;
+
+	//zadanie 2
+	cout << "podaj liczbe naturalna n ";
+	cin >> n;
+
+	zad2(n);
+
+	//zadanie 3
+	char znak;
+	cout << "podaj pierwsza liczbe ";
+	cin >> c;
+	cout << "podaj druga liczbe ";
+	cin >> d;
+	cout << "podaj jaki typ działania chcesz wykonać (+,-,/,*) ";
+	cin >> znak;
+
+	switch (znak){
+	case (+): cout << c + d << endl; break;
+	case (-): cout << c - d << endl; break;
+	case (*): cout << c * d << endl; break;
+
+
 }
+
+void zad1(int a, int b) {
+	if (a > b)
+		cout << a << "jest wieksze od " << b << endl;
+	else if (a < b)
+		cout << a << "jest mniejsze od " << b << endl;
+	else
+		cout << a << "jest rowne " << b << endl;
+}
+
+int zad12(int a, int b) {
+	if (a > b)
+		return a;
+	else
+		return b;
+}
+
+void zad2(int n) {
+	for (int i = 1; i <= n; i++) {
+		if (n % i == 0)
+			cout << "dzielniki n to : " << i << "\t";
+	}
+}
+
+
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
 // Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
