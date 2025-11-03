@@ -6,6 +6,11 @@ using namespace std;
 void zad1(int a, int b);
 int zad12(int a, int b);
 void zad2(int n);
+int zad31(int c, int d);
+int zad32(int c, int d);
+int zad33(int c, int d);
+int zad34(int c, int d);
+
 
 int a, b;
 int n;
@@ -17,7 +22,7 @@ int main() {
 	int wieksza;
 	cout << "podaj zmienna a ";
 	cin >> a;
-    cout << "podaj zmienna b ";
+	cout << "podaj zmienna b ";
 	cin >> b;
 
 	zad1(a, b);
@@ -25,7 +30,7 @@ int main() {
 	cout << "wieksza wartosc to " << wieksza << endl;
 
 	//zadanie 2
-	cout << "podaj liczbe naturalna n ";
+	cout << "podaj liczbe naturalna n " << endl;
 	cin >> n;
 
 	zad2(n);
@@ -36,15 +41,34 @@ int main() {
 	cin >> c;
 	cout << "podaj druga liczbe ";
 	cin >> d;
-	cout << "podaj jaki typ działania chcesz wykonać (+,-,/,*) ";
+	cout << "podaj jaki typ dzialania chcesz wykonac (+,-,/,*) ";
 	cin >> znak;
 
-	switch (znak){
-	case (+): cout << c + d << endl; break;
-	case (-): cout << c - d << endl; break;
-	case (*): cout << c * d << endl; break;
+	switch (znak) {
+	case ('+'): cout << "wynik dzialania: " << zad31(c, d) << endl; break;
+	case ('-'): cout << "wynik dzialania: " << zad32(c,d) << endl; break;
+	case ('*'): cout << "wynik dzialania: " << zad33(c,d) << endl; break;
+	case ('/'):{
+		if (d == 0)
+			cout << "Nie mozna dzielic przez 0 !" << endl;
+		else
+			cout << "wynik dzialania: " << zad34(c,d) << endl; break;
+		}
+	}
+}
 
 
+int zad31(int c, int d) {
+	return c + d;
+}
+int zad32(int c, int d) {
+	return c -d;
+}
+int zad33(int c, int d) {
+	return c * d;
+}
+int zad34(int c, int d) {
+	return c / d;
 }
 
 void zad1(int a, int b) {
@@ -66,7 +90,7 @@ int zad12(int a, int b) {
 void zad2(int n) {
 	for (int i = 1; i <= n; i++) {
 		if (n % i == 0)
-			cout << "dzielniki n to : " << i << "\t";
+			cout << "dzielniki n to : " << i << "\t" << endl;
 	}
 }
 
