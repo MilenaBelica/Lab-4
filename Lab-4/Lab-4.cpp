@@ -105,11 +105,11 @@ int main() {
 	}
 	int ilosc = zad7(sz);
 	cout << "Twoj szczesliwy numerek pojawil sie: " << ilosc << " razy." << endl;
-	float p = ilosc / 10;
+	int p = (ilosc / 10) * 100;
 	cout << "To " << p << " % wszystkich wylosowanych liczb. " << endl << endl;
 }
 int zad7(int sz) {
-	float count = 0;
+	int count = 0;
 	for (int i = 1; i <= 10; i++)
 	{
 		int x = rand() % 10 + 1;
