@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 void zad1(int a, int b);
 int zad12(int a, int b);
@@ -10,11 +11,19 @@ int zad31(int c, int d);
 int zad32(int c, int d);
 int zad33(int c, int d);
 int zad34(int c, int d);
+int zad4(int e, int f);
+int zad5(int n);
+int zad6(int n2);
+int zad61(int n2);
+
 
 
 int a, b;
 int n;
 int c, d;
+int e, f;
+int n1, n2;
+int sz;
 
 int main() {
 
@@ -27,13 +36,20 @@ int main() {
 
 	zad1(a, b);
 	wieksza = zad12(a, b);
-	cout << "wieksza wartosc to " << wieksza << endl;
+	if (a != b)
+		cout << "wieksza wartosc to " << wieksza << endl;
+	else
+		cout << "wartosci sa sobie rowne" << endl;
+
+	cout << endl;
 
 	//zadanie 2
-	cout << "podaj liczbe naturalna n " << endl;
+	cout << "podaj liczbe naturalna n ";
 	cin >> n;
 
 	zad2(n);
+
+	cout << endl;
 
 	//zadanie 3
 	char znak;
@@ -55,8 +71,59 @@ int main() {
 			cout << "wynik dzialania: " << zad34(c,d) << endl; break;
 		}
 	}
+	cout << endl;
+
+	//zadanie 4
+	cout << "Podaj liczbe (e): ";
+	cin >> e;
+	cout << "Podaj liczbe (f): ";
+	cin >> f;
+
+	cout << "Wynik z e do potęgi f: " << zad4(e, f) << endl << endl;
+
+	//zadanie 5
+	cout << "Podaj liczbe naturalna : ";
+	cin >> n1;
+
+	cout << "silnia n! rowna sie: " << zad5(n1) << endl << endl;
+
+	//zadanie 6
+	cout << "Podaj liczbe naturalna : ";
+	cin >> n2;
+
+	cout << "2 do potegi n-tej rowna sie: " << zad6(n2) << endl;
+	cout << "2 do potegi n-tej rowna sie: " << zad61(n2) << endl << endl;
+
+	//zadanie 7
+	cout << "Podaj swoj szczesliwy numerek z przedzialu 1-10 : ";
+	cin >> sz;
+	srand
+}
+int zad61(int n2) {
+	return pow(2, n2); //potęgowanie pow(a,b)
 }
 
+int zad6(int n2) {
+	int wynik2 = 1;
+	for (int z = 1; z <= n2; z++)
+		wynik2 = wynik2 * 2;
+		return wynik2;
+}
+
+int zad5(int n1) {
+	int wynik1 = 1;
+	for (int y = 1; y <= n1; y++)
+		wynik1 = wynik1 * y;
+		return wynik1;
+}
+
+
+int zad4(int e, int f) {
+	int wynik = 1;
+	for (int x = 1; x <= f; x++)
+		wynik = wynik * e;
+		return wynik;
+}
 
 int zad31(int c, int d) {
 	return c + d;
@@ -73,18 +140,20 @@ int zad34(int c, int d) {
 
 void zad1(int a, int b) {
 	if (a > b)
-		cout << a << "jest wieksze od " << b << endl;
+		cout << a << " jest wieksze od " << b << endl;
 	else if (a < b)
-		cout << a << "jest mniejsze od " << b << endl;
+		cout << a << " jest mniejsze od " << b << endl;
 	else
-		cout << a << "jest rowne " << b << endl;
+		cout << a << " jest rowne " << b << endl;
 }
 
 int zad12(int a, int b) {
-	if (a > b)
-		return a;
-	else
-		return b;
+		if (a > b)
+			return a;
+		else if (b > a)
+			return b;
+		else
+			return a,b;
 }
 
 void zad2(int n) {
