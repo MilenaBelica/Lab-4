@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
 using namespace std;
 void zad1(int a, int b);
 int zad12(int a, int b);
@@ -15,6 +16,7 @@ int zad4(int e, int f);
 int zad5(int n);
 int zad6(int n2);
 int zad61(int n2);
+int zad7(int sz);
 
 
 
@@ -97,7 +99,27 @@ int main() {
 	//zadanie 7
 	cout << "Podaj swoj szczesliwy numerek z przedzialu 1-10 : ";
 	cin >> sz;
-	srand
+	
+	if (sz > 10 || sz < 1) {
+		cout << "Podano numerek spoza przedzialu" << endl;
+	}
+	int ilosc = zad7(sz);
+	cout << "Twoj szczesliwy numerek pojawil sie: " << ilosc << " razy." << endl;
+	float p = ilosc / 10;
+	cout << "To " << p << " % wszystkich wylosowanych liczb. " << endl << endl;
+}
+int zad7(int sz) {
+	float count = 0;
+	for (int i = 1; i <= 10; i++)
+	{
+		int x = rand() % 10 + 1;
+		cout << x << "\t";
+
+		cout << endl;
+		if (x == sz)
+			count++;
+	}
+	return count;
 }
 int zad61(int n2) {
 	return pow(2, n2); //potęgowanie pow(a,b)
