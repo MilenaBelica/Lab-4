@@ -29,6 +29,7 @@ int sz;
 
 int main() {
 
+	
 	//zadanie 1
 	int wieksza;
 	cout << "podaj zmienna a ";
@@ -107,6 +108,15 @@ int main() {
 	cout << "Twoj szczesliwy numerek pojawil sie: " << ilosc << " razy." << endl;
 	int p = (ilosc / 10) * 100;
 	cout << "To " << p << " % wszystkich wylosowanych liczb. " << endl << endl;
+	
+
+	//zadanie 8
+	for (int k = 0; k <= 100; k++) {
+		if (k % 2 == 1)
+			cout << (k - 1) / 2 << endl;
+		else
+			cout << (k / 2) << endl;
+	}
 }
 int zad7(int sz) {
 	int count = 0;
