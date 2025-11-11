@@ -18,7 +18,7 @@ int zad6(int n2);
 int zad61(int n2);
 int zad7(int sz);
 
-
+ 
 
 int a, b;
 int n;
