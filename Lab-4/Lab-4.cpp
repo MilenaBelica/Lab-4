@@ -17,14 +17,6 @@ int zad5(int n);
 int zad6(int n2);
 int zad61(int n2);
 int zad7(int sz);
-float FtoC(float fahr);
-float FtoK(float fahr);
-float CtoF(float celsius);
-float CtoK(float celsius);
-float KtoC(float kelvin);
-float KtoF(float kelvin5);
-
-  
 
 int a, b;
 int n;
